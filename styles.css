@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    color: white;
+    text-align: center;
+    margin: 0;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+/* Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+/* Cells */
+.cell {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.1s ease-in-out;
+}
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Winning Cells */
+.winning-cell {
+    background: #ffeb3b !important;
+    color: black;
+    animation: blink 0.5s infinite alternate;
+}
+
+@keyframes blink {
+    from { background: #ffeb3b; }
+    to { background: #ffc107; }
+}
+
+/* Message Display */
+#message {
+    margin-top: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffea00;
+}
+
+/* Buttons */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e64a19;
+}
+
+
+
+
+/* Dark Mode Toggle (Round Button) */
+#darkModeToggle {
+    width: 45px;
+    height: 45px;
+    background: #008CBA;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s ease-in-out;
+    font-size: 1.5em;
+    color: white;
+}
+
+
+
+
+
+#darkModeToggle:hover {
+    background: #0074a6;
+    transform: rotate(180deg) scale(1.1);
+
+}
+
+
+
+
+/* Center Buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between buttons */
+    margin-top: 15px;
+}
+
+/* Reset Button */
+#reset {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#reset:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+}
+
+
+
